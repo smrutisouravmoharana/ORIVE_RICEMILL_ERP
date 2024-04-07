@@ -1,0 +1,5 @@
+package com.orive.InventoryPurchase.Entity;
+
+public class PaddyDetails {
+
+}

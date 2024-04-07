@@ -1,0 +1,51 @@
+package com.orive.InventoryPurchase.Entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "paddydetails")
+public class PaddyDetails {
+
+	@Id
+	@SequenceGenerator(name = "paddypurchase_id_sequence", initialValue = 100000, allocationSize = 1)
+	@GeneratedValue(generator = "paddypurchase_id_sequence", strategy = GenerationType.SEQUENCE)
+	private Long paddyDetailsId;
+	
+	@Column(name = "paddy_variety")
+	private String paddyVariety;
+	
+	@Column(name = "no_of_pkts")
+	private Long noOfPkts;
+	
+	@Column(name = "dc_pkts")
+	private Long dcPkts;
+	
+	@Column(name = "dc_kg_pkts")
+	private double dcKgPkts;
+	
+	@Column(name = "balu_pkts")
+	private Long baluPkts;
+	
+	@Column(name = "balu_kg_pkts")
+	private double baluKgPkts;
+	
+	@Column(name = "pole")
+	private String pole;
+	
+	@Column(name = "actual_mc")
+	private double actualMc;
+	
+	
+}

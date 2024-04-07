@@ -1,0 +1,61 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+#      - id: LOGIN-SERVICE
+#        uri: lb://LOGIN-SERVICE
+#        predicates:
+#        - Path=/** 
+      - id: RABI-SERVICE
+        uri: lb://RABI-SERVICE
+        predicates:
+        - Path=/**
+      - id: KHARIF-SERVICE
+        uri: lb://KHARIF-SERVICE
+        predicates:
+        - Path=/** 
+      
+      - id: SUPPLIER-SERVICE
+        uri: lb://SUPPLIER-SERVICE
+        predicates:
+        - Path=/suppliers/**  
+      - id: CUSTOMER-SERVICE
+        uri: lb://CUSTOMER-SERVICE
+        predicates:
+        - Path=/customer/** 
+      - id: TRANSPORTATION-SERVICE
+        uri: lb://TRANSPORTATION-SERVICE
+        predicates:
+        - Path=/transportation/**
+      - id: PURCHASE-SERVICE
+        uri: lb://PURCHASE-SERVICE
+        predicates:
+        - Path=/purchase/** 
+      - id: PRODUCTUNIT-SERVICE
+        uri: lb://PRODUCTUNIT-SERVICE
+        predicates:
+        - Path=/unit/**
+      - id: TRANSPORTATION-SERVICE
+        uri: lb://TRANSPORTATION-SERVICE
+        predicates:
+        - Path=/transportation/**
+      - id: SALES-SERVICE
+        uri: lb://SALES-SERVICE
+        predicates:
+        - Path=/sales/**
+      - id: PRODUCT-SUMMARY
+        uri: lb://PRODUCT-SUMMARY
+        predicates:
+        - Path=/productcontroller/**     
+      - id: PRODUCT-SUMMARY
+        uri: lb://PRODUCT-SUMMARY
+        predicates:
+        - Path=/productcontroller/**     
+      - id: PRODUCTCATEGORY-SERVICE
+        uri: lb://PRODUCTCATEGORY-SERVICE
+        predicates:
+        - Path=/category/**        

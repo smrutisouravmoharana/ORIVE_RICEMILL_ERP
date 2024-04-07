@@ -1,0 +1,5 @@
+package com.orive.InventoryManufacturingJournal;
+
+public class ManufactureProduct {
+
+}

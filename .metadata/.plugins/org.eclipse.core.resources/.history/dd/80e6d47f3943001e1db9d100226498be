@@ -1,0 +1,18 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: PARTY-FARMER
+        uri: lb://PARTY-FARMER
+        predicates:
+        - path:/farmer/**
+      - id: PARTY-CUSTOMER
+        uri: lb://PARTY-CUSTOMER
+        predicates:
+        - path:/customer/**
+
+          

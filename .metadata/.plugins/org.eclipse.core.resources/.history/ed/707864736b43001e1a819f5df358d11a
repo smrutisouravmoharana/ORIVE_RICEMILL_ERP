@@ -1,0 +1,55 @@
+package com.orive.PartCustomer.Controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.ws.rs.POST;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.orive.PartCustomer.Entity.Customer;
+import com.orive.PartCustomer.Service.CustomerService;
+
+@RestController
+@RequestMapping(value = "/customer")
+public class CustomerController {
+
+	@Autowired
+	private CustomerService customerService;
+	
+	@PostMapping(value = "/save")
+	public Customer save(@RequestBody Customer customer) 
+	{
+		return customerService.save(customer);
+	}
+	
+	@GetMapping(value = "/get")
+	public List<Customer> getAll()
+	{
+		return customerService.getAll();
+	}
+	@GetMapping(value = "/getById/{customerId}")
+	public Optional<Customer> getById(@PathVariable("customerId") Long customerId)
+	{
+		return customerService.getById(customerId);
+	}
+	@DeleteMapping(value = "/delete/{customerId}")
+	public void delete(@PathVariable("customerId") Long customerId)
+	{
+		customerService.delete(customerId);
+	}
+	@PutMapping(value = "/update/{customerId}")
+	public Customer update(@PathVariable("customerId") Long customerId,@RequestBody Customer customer)
+	{
+		return customerService.update(customerId, customer);
+	}
+
+}

@@ -1,0 +1,44 @@
+package com.orive.InventoryPurchase.Entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "gunnydetails")
+public class GunnyDetails {
+
+	@Id
+	@SequenceGenerator(name = "gunnydetails_id_sequence", initialValue = 100000, allocationSize = 1)
+	@GeneratedValue(generator = "gunnydetails_id_sequence", strategy = GenerationType.SEQUENCE)
+	private Long gunnyDetailsId;
+	
+	@Column(name = "old")
+	private double old;
+	
+	@Column(name = "pkt")
+	private double pkt;
+	
+	@Column(name = "p_pkt")
+	private double pPkt;
+	
+	@Column(name = "rejectd")
+	private double rejected;
+	
+	@Column(name = "total_no_of_gunny")
+	private double totalNoOfGunny;
+	
+	@Column(name = "avg_wt_pkt")
+	private double avgWtPkt;
+}

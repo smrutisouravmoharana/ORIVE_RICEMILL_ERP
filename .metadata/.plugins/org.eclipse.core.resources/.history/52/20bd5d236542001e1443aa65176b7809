@@ -1,0 +1,5 @@
+package com.orive.Party.Entity;
+
+public class Customer {
+
+}

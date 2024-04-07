@@ -1,0 +1,19 @@
+package com.orive.InventoryStock.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.orive.InventoryStock.Service.RawMaterialService;
+import com.orive.InventoryStock.Service.StockService;
+import com.orive.InventoryStock.Service.WasteMaterialService;
+
+@RestController
+@RequestMapping("/stock")
+public class AllMaterialController {
+
+	@Autowired
+	private StockService stockService;
+	
+	
+}

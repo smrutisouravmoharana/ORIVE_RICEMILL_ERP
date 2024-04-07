@@ -1,0 +1,55 @@
+package com.orive.InventoryPurchase.Entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "paddypurchase")
+public class PaddyPurchase {
+
+	@Id
+	@SequenceGenerator(name = "paddypurchase_id_sequence", initialValue = 100000, allocationSize = 1)
+	@GeneratedValue(generator = "paddypurchase_id_sequence", strategy = GenerationType.SEQUENCE)
+	private Long paddyPurcahseId;
+	
+	@Column(name = "rst_number")
+	private String rstNumber;
+	
+	@Column(name = "date")
+	private Date date;
+	
+	@Column(name = "party")
+	private String party;
+	
+	@Column(name = "mobile_number")
+	private Long mobileNumber;
+	
+	@Column(name = "address")
+	private String address;
+	
+	@Column(name = "vehicle_number")
+	private String vehicleNumber;
+	
+	@Column(name = "vehicle_type")
+	private String vehicleType;
+	
+	@Column(name = "gross_weight")
+	private double grossWeight;
+	
+	@Column(name = "tare_weight")
+	private double tareWeight;
+}

@@ -1,0 +1,5 @@
+package com.orive.InventoryStock.Entity;
+
+public class Stock {
+
+}

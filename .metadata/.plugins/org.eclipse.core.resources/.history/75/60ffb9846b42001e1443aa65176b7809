@@ -1,0 +1,13 @@
+package com.orive.Purchase.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "purchase")
+public class Purchase {
+
+	private Long purchaseId;
+	
+	
+}

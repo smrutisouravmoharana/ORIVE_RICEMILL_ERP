@@ -1,0 +1,13 @@
+package com.orive.PartCustomer;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PartCustomerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PartCustomerApplication.class, args);
+	}
+
+}

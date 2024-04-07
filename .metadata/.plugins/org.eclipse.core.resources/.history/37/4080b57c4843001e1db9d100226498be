@@ -1,0 +1,23 @@
+package com.orive.InventoryPurchase.Entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "godowndetails")
+public class GodownDetails {
+
+	private Long godownDetailsId;
+	
+	private double labourAmount;
+	
+	private Long noOfLabourPresent;
+	
+	private String workerName;
+	
+	private double paddyInPkts;
+	
+	private String godownName;
+	
+	
+}

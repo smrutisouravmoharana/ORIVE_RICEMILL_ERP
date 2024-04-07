@@ -1,0 +1,60 @@
+package com.orive.Party.Service;
+
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.orive.Party.Entity.Customer;
+import com.orive.Party.Entity.Farmer;
+import com.orive.Party.Repository.CustomerRepository;
+import com.orive.Party.Repository.FarmerRepository;
+
+@Service
+public class CustomerService {
+
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	public Customer save(Customer customer)
+	{
+		return customerRepository.save(customer);
+	}
+	
+	public List<Customer> getAll()
+	{
+		return customerRepository.findAll();
+	}
+	
+	public Optional<Customer> getfarmerById(Long customerId)
+	{
+		return customerRepository.findById(customerId);
+	}
+	
+	public void deleteById(Long customerId)
+	{
+		customerRepository.deleteById(customerId);
+		
+	}
+	
+	public Customer update(Long customerId,Customer  customer)
+	{
+		Optional<Customer> optional=customerRepository.findById(customerId);
+		if(optional.isPresent())
+		{
+			Customer customer2=optional.get();
+			
+			customer2.setCustomerName(customer.getCustomerName());
+			customer2.setMobileNumber(customer.getMobileNumber());
+			customer2.setAddress(customer.getAddress());
+			
+			Customer customer3=customerRepository.save(customer2);
+			return customer3;
+		}else
+		{
+			throw new NoSuchElementException("Farmer Not Found");
+		}
+	}
+}

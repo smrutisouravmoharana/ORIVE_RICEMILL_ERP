@@ -1,0 +1,5 @@
+package com.orive.InventorySales.Repository;
+
+public class CreateOrderRepository {
+
+}

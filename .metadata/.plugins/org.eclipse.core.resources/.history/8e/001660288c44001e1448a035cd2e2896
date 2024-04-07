@@ -1,0 +1,5 @@
+package com.orive.InventoryPurchase.Repository;
+
+public class GunnyDetailsRepository {
+
+}

@@ -1,0 +1,70 @@
+package com.orive.InventoryPurchase.Entity;
+
+import java.util.Date;
+import java.util.List;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "paddypurchase")
+public class PaddyPurchase {
+
+	@Id
+	@SequenceGenerator(name = "paddypurchase_id_sequence", initialValue = 100000, allocationSize = 1)
+	@GeneratedValue(generator = "paddypurchase_id_sequence", strategy = GenerationType.SEQUENCE)
+	private Long paddyPurcahseId;
+	
+	@Column(name = "rst_number")
+	private String rstNumber;
+	
+	@Column(name = "rst_details")
+	private String rstDetails;
+	
+	@Column(name = "date")
+	private Date date;
+	
+	@Column(name = "party")
+	private String party;
+	
+	@Column(name = "mobile_number")
+	private Long mobileNumber;
+	
+	@Column(name = "address")
+	private String address;
+	
+	@Column(name = "vehicle_number")
+	private String vehicleNumber;
+	
+	@Column(name = "vehicle_type")
+	private String vehicleType;
+	
+	@Column(name = "gross_weight")
+	private double grossWeight;
+	
+	@Column(name = "tare_weight")
+	private double tareWeight;
+	
+	@ElementCollection
+	private GunnyDetails  gunnyDetails;
+	
+	@ElementCollection
+	private List<PaddyDetails> paddyDetails;
+	
+	@ElementCollection
+	private List<GodownDetails> godownDetails;
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Purchase&apos;&#x0D;&#x0A;- Original project: &apos;Purchase&apos;&#x0D;&#x0A;- Original element: &apos;Purchase/src/main/java/com.orive.Purchase&apos;&#x0D;&#x0A;- Delete subpackages" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.orive.Purchase.Repository" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.orive.Purchase.Entity" element3="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.orive.Purchase" element4="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.orive" element5="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com" elements="5" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1692874005098" subPackages="true" version="1.0"/>
+</session>

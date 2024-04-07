@@ -1,0 +1,9 @@
+package com.orive.Party.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.orive.Party.Entity.Farmer;
+
+public interface FarmerRepository extends JpaRepository<Farmer, Long>{
+
+}

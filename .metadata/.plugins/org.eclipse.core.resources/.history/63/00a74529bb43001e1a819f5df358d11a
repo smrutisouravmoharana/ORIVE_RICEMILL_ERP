@@ -1,0 +1,46 @@
+package com.orive.InventoryPurchase.Entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "godowndetails")
+public class GodownDetails {
+
+	@Id
+	@SequenceGenerator(name = "godownDetails_id_sequence", initialValue = 100000, allocationSize = 1)
+	@GeneratedValue(generator = "godownDetails_id_sequence", strategy = GenerationType.SEQUENCE)
+	private Long godownDetailsId;
+	
+	@Column(name = "labour_amount")
+	private double labourAmount;
+	
+	@Column(name = "no_of_labour_present")
+	private Long noOfLabourPresent;
+	
+	@Column(name = "worker_name")
+	private String workerName;
+	
+	@Column(name = "paddy_in_pkts")
+	private double paddyInPkts;
+	
+	@Column(name = "go_down_name")
+	private String godownName;
+	
+	@Column(name = "total")
+	private double total;
+	
+	@Column(name = "labour_charge")
+	private double labourCharge;
+}

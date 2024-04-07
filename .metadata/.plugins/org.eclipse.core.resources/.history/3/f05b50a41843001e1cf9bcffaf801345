@@ -1,0 +1,5 @@
+package com.orive.PartCustomer.Repository;
+
+public class CustomerRepository {
+
+}

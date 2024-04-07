@@ -1,0 +1,5 @@
+package com.orive.PartCustomer.Controller;
+
+public class CustomerController {
+
+}

@@ -1,0 +1,5 @@
+package com.orive.InventorySales.Entity;
+
+public class CreateOrder {
+
+}

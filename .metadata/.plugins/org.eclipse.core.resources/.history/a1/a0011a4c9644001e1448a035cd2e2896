@@ -1,0 +1,54 @@
+package com.orive.InventoryPurchase.Controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.orive.InventoryPurchase.Entity.PaddyPurchase;
+import com.orive.InventoryPurchase.Service.PaddyPurchaseService;
+
+@RestController
+@RequestMapping(value = "/purchase")
+public class PaddyPurchaseController {
+
+	@Autowired
+	private PaddyPurchaseService paddyPurchaseService;
+	
+	@PostMapping(value = "/save")
+	public PaddyPurchase save(@RequestBody PaddyPurchase paddyPurchase)
+	{
+		return paddyPurchaseService.save(paddyPurchase);
+	}
+	
+	@GetMapping(value = "/get")
+	public List<PaddyPurchase> get()
+	{
+		return paddyPurchaseService.get();
+	}
+	
+	@GetMapping(value = "/getbyid/{paddyPurcahseId}")
+	public Optional<PaddyPurchase> getById(@PathVariable("paddyPurcahseId") Long paddyPurcahseId)
+	{
+		return paddyPurchaseService.getById(paddyPurcahseId);
+	}
+	
+	@DeleteMapping(value = "/delete/{paddyPurcahseId}")
+	public void delete(@PathVariable("paddyPurcahseId") Long paddyPurcahseId)
+	{
+		paddyPurchaseService.delete(paddyPurcahseId);
+	}
+	
+	@GetMapping(value = "/get/{rstNumber}/{rstDetails}")
+	public Optional<PaddyPurchase> getByRst(@PathVariable("rstNumber") String rstNumber,@PathVariable("rstDetails") String rstDetails)
+	{
+		return paddyPurchaseService.getByRst(rstNumber, rstDetails);
+	}
+}

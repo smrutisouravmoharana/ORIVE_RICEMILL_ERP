@@ -1,0 +1,43 @@
+package com.orive.PartyFarmer.Entity;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "farmer")
+public class Farmer {
+
+	@Id
+	@SequenceGenerator(name = "farmer_id_sequence", initialValue = 100000, allocationSize = 1)
+	@GeneratedValue(generator = "farmer_id_sequence", strategy = GenerationType.SEQUENCE)
+	private Long farmerId;
+	
+	@Column(length = 20, unique = true)
+	private String farmerName;
+	
+	@Column(length = 25)
+	@Size(min = 3, max = 100)
+	@NotBlank
+	private String address;
+	
+	@NotBlank
+	private double paddyBalance;
+	
+	@NotBlank
+	@Column(length = 10)
+	private Long mobileNumber;
+}

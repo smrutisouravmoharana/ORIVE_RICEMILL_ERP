@@ -1,0 +1,5 @@
+package com.orive.InventorySales.Service;
+
+public class CreateOrderService {
+
+}

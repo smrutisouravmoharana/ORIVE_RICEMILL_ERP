@@ -1,0 +1,27 @@
+package com.orive.InventoryPurchase.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.orive.InventoryPurchase.Entity.GunnyDetails;
+import com.orive.InventoryPurchase.Repository.GunnyDetailsRepository;
+
+@Service
+public class GunnyDetailsService {
+
+	@Autowired
+	private GunnyDetailsRepository gunnyDetailsRepository;
+	
+	
+	public GunnyDetails save(GunnyDetails gunnyDetails)
+	{
+		return gunnyDetailsRepository.save(gunnyDetails);
+	}
+	
+	public List<GunnyDetails> get()
+	{
+		return gunnyDetailsRepository.findAll();
+	}
+}

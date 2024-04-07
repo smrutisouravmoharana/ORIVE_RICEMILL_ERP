@@ -1,0 +1,5 @@
+package com.orive.Party.Repository;
+
+public class FarmerRepository {
+
+}

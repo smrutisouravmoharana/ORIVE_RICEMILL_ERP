@@ -1,0 +1,5 @@
+package com.orive.InventoryStock.Repository;
+
+public class FinishedMaterialRepository {
+
+}

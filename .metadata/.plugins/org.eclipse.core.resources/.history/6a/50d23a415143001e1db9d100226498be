@@ -1,0 +1,47 @@
+package com.orive.InventorySales.Entity;
+
+import java.util.Date;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "createorder")
+public class CreateOrder {
+
+	@Id
+	@SequenceGenerator(name = "farmer_id_sequence", initialValue = 100000, allocationSize = 1)
+	@GeneratedValue(generator = "farmer_id_sequence", strategy = GenerationType.SEQUENCE)
+	private Long createOrderId;
+	
+	private String products;
+	
+	private double quantity;
+	
+	private Date manufactoringDate;
+	
+	private String qualityCheck;
+	
+	private String distributor;
+	
+	private Date estimatedDeliveryDate;
+	
+	private Date expairyDate;
+	
+	private String orderStatus;
+	
+	private double pricePerUnit;
+	
+	private String unit;
+}

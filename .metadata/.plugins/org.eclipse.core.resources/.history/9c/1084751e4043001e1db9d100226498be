@@ -1,0 +1,13 @@
+package com.orive.InventoryPurchase;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class InventoryPurchaseApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(InventoryPurchaseApplication.class, args);
+	}
+
+}

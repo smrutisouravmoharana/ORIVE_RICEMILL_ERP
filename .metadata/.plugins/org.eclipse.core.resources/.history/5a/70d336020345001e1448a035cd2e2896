@@ -1,0 +1,16 @@
+package com.orive.InventoryManufacturingJournal;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "manufactureproduct")
+public class ManufactureProduct {
+
+	@Id
+	@GeneratedValue(generator = gen)
+	private Long manufactureProductId;
+	
+}

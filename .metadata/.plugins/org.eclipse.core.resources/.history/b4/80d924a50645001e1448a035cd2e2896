@@ -1,0 +1,5 @@
+package com.orive.InventoryManufacturingJournal.Repository;
+
+public class CoProductRepository {
+
+}

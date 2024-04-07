@@ -1,0 +1,54 @@
+package com.orive.InventoryPurchase.Entity;
+
+
+
+import org.hibernate.annotations.GenericGenerator;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "gunnydetails")
+public class GunnyDetails {
+
+	@Id
+	@GenericGenerator(name = "auto",strategy = "increment")
+	@GeneratedValue(generator = "auto")
+	@Column(name = "gunny_details_id")
+	private Long gunnyDetailsId;
+	
+	@Column(name = "old")
+	private double old;
+	
+	@Column(name = "pkt")
+	private double pkt;
+	
+	@Column(name = "p_pkt")
+	private double pPkt;
+	
+	@Column(name = "rejectd")
+	private double rejected;
+	
+	@Column(name = "total_no_of_gunny")
+	private double totalNoOfGunny;
+	
+	@Column(name = "avg_wt_pkt")
+	private double avgWtPkt;
+	
+	
+}

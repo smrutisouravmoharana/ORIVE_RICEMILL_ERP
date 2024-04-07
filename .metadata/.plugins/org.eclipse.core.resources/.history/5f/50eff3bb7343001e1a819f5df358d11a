@@ -1,0 +1,5 @@
+package com.orive.InventorySales.Controller;
+
+public class CreateOrderController {
+
+}

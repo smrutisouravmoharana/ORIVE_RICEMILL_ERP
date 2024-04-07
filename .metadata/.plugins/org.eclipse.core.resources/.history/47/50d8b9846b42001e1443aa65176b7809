@@ -1,0 +1,5 @@
+package com.orive.Purchase.Entity;
+
+public class Purchase {
+
+}

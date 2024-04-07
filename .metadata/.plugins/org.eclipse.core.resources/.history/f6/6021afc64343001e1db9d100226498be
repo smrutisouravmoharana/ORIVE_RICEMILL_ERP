@@ -1,0 +1,31 @@
+package com.orive.InventoryPurchase.Entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "paddypurchase")
+public class PaddyPurchase {
+
+	private Long paddyPurcahseId;
+	
+	private String rstNumber;
+	
+	private Date date;
+	
+	private String party;
+	
+	private Long mobileNumber;
+	
+	private String address;
+	
+	private String vehicleNumber;
+	
+	private String vehicleType;
+	
+	private double grossWeight;
+	
+	private double tareWeight;
+}

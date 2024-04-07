@@ -1,0 +1,9 @@
+package com.orive.InventoryPurchase.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.orive.InventoryPurchase.Entity.GunnyDetails;
+
+public interface GunnyDetailsRepository extends JpaRepository<GunnyDetails, Long>{
+
+}
